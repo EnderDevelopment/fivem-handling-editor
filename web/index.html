@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Handling Studio</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app" class="hidden">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-icon">H</div><div><strong>APEX</strong><span>HANDLING STUDIO</span></div></div>
+      <div class="side-label">WORKSPACE</div><div class="nav-item active"><span>◈</span> Vehicle tuning</div>
+      <div class="sidebar-bottom"><span class="status-dot"></span> SERVER SYNC ACTIVE</div>
+    </aside>
+    <section class="workspace">
+      <header><div><div class="eyebrow">VEHICLE CONFIGURATION</div><h1>Handling editor</h1><p>Tune, preview and publish handling across your server.</p></div><button id="close" class="icon-button" aria-label="Close">×</button></header>
+      <div class="toolbar"><label class="search"><span>⌕</span><input id="search" placeholder="Search every vehicle model..." autocomplete="off"></label><div id="vehicle-count" class="count">Loading vehicles</div></div>
+      <div class="layout"><div class="vehicle-panel"><div class="panel-title">VEHICLE LIBRARY <span>ALL MODELS</span></div><div id="vehicles" class="vehicles"></div></div>
+        <div class="editor-panel"><div id="empty" class="empty"><div class="empty-icon">⌁</div><h2>Select a vehicle</h2><p>Choose a model from the library to inspect and tune its handling.</p></div>
+          <div id="editor" class="hidden"><div class="vehicle-heading"><div><div id="vehicle-model" class="eyebrow">MODEL</div><h2 id="vehicle-label"></h2></div><span id="saved-badge" class="badge">DEFAULT</span></div><div class="editor-scroll"><div id="fields" class="fields"></div></div><div class="actions"><button id="reset" class="button secondary">Reset override</button><button id="save" class="button primary">Save &amp; publish <span>↗</span></button></div></div>
+        </div>
+      </div>
+      <div id="toast" class="toast"></div>
+    </section>
+  </main><script src="app.js"></script>
+</body></html>
